@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://jadentseng.github.io/2016/02/27/android-Fragment-repace/index.html">
 <meta property="og:site_name" content="Jaden Tseng">
 <meta property="og:description" content="最近在做一个项目，开始我的界面使用的是原生Activity+原生Fragment。两个Fragment之间来回切换，界面只显示一个Fragment。这回用到ft.replace方法同时设置了setCustomAnimation。结果发现Fragment在切换的过程中出现一瞬间的重叠，老是找不出来原因。后来，网上查了一些资料，说使用V4包，因为V4包考虑到了兼容性，并且ft的setCustomA">
-<meta property="og:updated_time" content="2016-09-11T07:10:52.792Z">
+<meta property="og:updated_time" content="2016-09-11T07:10:52.793Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="android原生Fragment在replace时切换动画过程中出现卡顿，界面重叠的问题">
 <meta name="twitter:description" content="最近在做一个项目，开始我的界面使用的是原生Activity+原生Fragment。两个Fragment之间来回切换，界面只显示一个Fragment。这回用到ft.replace方法同时设置了setCustomAnimation。结果发现Fragment在切换的过程中出现一瞬间的重叠，老是找不出来原因。后来，网上查了一些资料，说使用V4包，因为V4包考虑到了兼容性，并且ft的setCustomA">
@@ -21,8 +21,6 @@
   
     <link rel="icon" href="/img/favicon.png">
   
-  
-  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
   
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -37,7 +35,7 @@
   <script>
       var yiliaConfig = {
           fancybox: true,
-          animate: true,
+          animate: false,
           isHome: false,
           isPost: true,
           isArchive: false,
@@ -55,7 +53,7 @@
     <header id="header" class="inner">
         <a href="/" class="profilepic">
             
-            <img lazy-src="/img/head.jpg" class="js-avatar">
+            <img src="/img/head.jpg" class="js-avatar" style="width: 100%;height: 100%;opacity: 1;">
             
         </a>
 
@@ -190,7 +188,7 @@
         <header id="header" class="inner">
             <a href="/" class="profilepic">
                 
-                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                    <img src="/img/head.jpg" class="js-avatar" style="width: 100%; height: 100%; opacity: 1;">
                 
             </a>
             <hgroup>
@@ -429,7 +427,7 @@
     <div class="outer">
         <div id="footer-info">
             <div class="footer-left">
-                &copy; 2016 Jaden Tseng
+                &copy; 2018 Jaden Tseng
             </div>
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
