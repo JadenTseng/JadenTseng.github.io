@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhenggang.ink/"/>
-  <updated>2016-09-11T07:10:52.793Z</updated>
+  <updated>2018-05-20T13:43:38.170Z</updated>
   <id>http://zhenggang.ink/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python-爬虫</title>
+    <link href="http://zhenggang.ink/2016/05/20/python-%E7%88%AC%E5%8F%96%E5%A6%B9%E5%AD%90%E5%9B%BE/"/>
+    <id>http://zhenggang.ink/2016/05/20/python-爬取妹子图/</id>
+    <published>2016-05-20T13:34:41.000Z</published>
+    <updated>2018-05-20T13:43:38.170Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>本人是搞Java、Android开发的，有编程基础。python是刚刚起步学习，在看完《Head first python》这本书后，一直想做一个项目练练手，思来想去不知道做python什么项目好，看网上大家都在玩爬虫。所以自己也花了一个晚上的时间写了个抓取“妹子图片”的爬虫，养眼的福利噢<br>大家需要注意博主用的是Python3.x 。</p><p>先上截图，看看成果：</p><p><img src="https://upload-images.jianshu.io/upload_images/1987130-d1ebf037ca2ab456.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/365" alt=""></p><p><img src="https://upload-images.jianshu.io/upload_images/1987130-745f4ef49137db2e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt=""></p><h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><ol><li><strong>找个图片网站，分析它页面上的HTML源代码，提取HTML源代码中有用信息（图片链接、名称）</strong> </li><li>下载图片到本地  </li></ol><h5 id="详细过程"><a href="#详细过程" class="headerlink" title="详细过程"></a>详细过程</h5><p>分析网站，我们浏览器F12，进入开发者模式，通过箭头查找模式找到图片显示区域的父容器:</p><p>这个标签内有好多个标签，li标签内部有标签，我们要提取的内容就是href的地址（即相册地址），以及相册描述</p><p><img src="https://upload-images.jianshu.io/upload_images/1987130-4b03e609d1480fcb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt=""></p><p>光有相册的信息还不够，我们还要去相册的网页看一下，把相册里面的所有图片链接给提取出来。 </p><p><img src="https://upload-images.jianshu.io/upload_images/1987130-2573b1e58ebba83a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt=""></p><p>分析该页面，我们发现它的html源代码中有<div class="pagenavi">这个地方就是相册内图片的导航区域（即</div></p><p>上下图页面，这里每一个图片显示在一个对应的页面)。</p><p>代码中，我们要把相册的图片总数给拿到，即上图“51”，表示最后一张图片。</p><p>它的每一张图片对应的网页都是有规律的：</p><p><a href="http://www.mzitu.com/62728" target="_blank" rel="external">http://www.mzitu.com/62728</a></p><p><a href="http://www.mzitu.com/62728/2" target="_blank" rel="external">http://www.mzitu.com/62728/2</a></p><p>………</p><p><a href="http://www.mzitu.com/62728/51" target="_blank" rel="external">http://www.mzitu.com/62728/51</a></p><p>发现了吗，我们只需要拿到总图片个数，然后代码中拼接一下，<strong>生成51个网页路径即可</strong>。</p><p>然后我们对分别对着51个页面解析html源代码，提取出<strong>图片的路径</strong></p><p>代码我已经写好了，看官们可以访问代码仓：<a href="https://link.jianshu.com?t=https://github.com/JadenTseng/python-get-girl-image" target="_blank" rel="external">https://github.com/JadenTseng/python-get-girl-image</a></p><p>获取。</p><h4 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h4><p>因为没有GUI图像化界面，就不能发给非程序员的小伙伴分享成果，自己也想接触一下python的图形化界面开发，于是就使用了PyQt来实现咱们的妹子图图形化界面版本，代码已经追加到了项目中。喜欢的小伙伴们可以start、fork。 </p><p>上一张效果图给大家： </p><p><img src="https://upload-images.jianshu.io/upload_images/1987130-3a1b646555bb44e6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h4&gt;&lt;p&gt;本人是搞Java、Android开发的，有编程基础。python是刚刚起步学习，在看完《Head first python》这本书后，一直想
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="http://zhenggang.ink/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="http://zhenggang.ink/tags/Python/"/>
+    
+      <category term="爬虫" scheme="http://zhenggang.ink/tags/%E7%88%AC%E8%99%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>python-运算符</title>

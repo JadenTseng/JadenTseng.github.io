@@ -29,7 +29,7 @@
     <!--Title-->
 
 
-<title>Archives | Jaden Tseng</title>
+<title>python-爬虫 | Jaden Tseng</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Jaden Tseng" type="application/atom+xml">
@@ -122,63 +122,121 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content ">
-                    <div id="main">
-  <div id="post-list">
-    <ul class="archives-post-list">
-    	<h1 class="info">undefined年 undefined月</h1>
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="python-爬虫">
+            
+	            python-爬虫
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/Python">
+            Python
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+                    <a href="/tags/Python" title='Python'>
+                        Python
+                    </a>
+                
+                    <a href="/tags/爬虫" title='爬虫'>
+                        爬虫
+                    </a>
+                
+            
+        </span>
+    </span>
+    
+
+    
         
-          <li class="post-items" _href="/2016/05/20/python-爬取妹子图/">
-            <h3 class="post-item-title">
-            	<a href="/2016/05/20/python-爬取妹子图/"> python-爬虫 </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/2016/02/27/python-运算符/">
-            <h3 class="post-item-title">
-            	<a href="/2016/02/27/python-运算符/"> python-运算符 </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/2016/02/27/android-Fragment-repace/">
-            <h3 class="post-item-title">
-            	<a href="/2016/02/27/android-Fragment-repace/"> android原生Fragment在replace时切换动画过程中出现卡顿，界面重叠的问题 </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/2015/12/20/Android-Training-Saving-Data/">
-            <h3 class="post-item-title">
-            	<a href="/2015/12/20/Android-Training-Saving-Data/"> Android-Training-Saving Data </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/2015/11/30/2015-11-30-Android性能优化-SparseArray替代HashMap/">
-            <h3 class="post-item-title">
-            	<a href="/2015/11/30/2015-11-30-Android性能优化-SparseArray替代HashMap/"> Android性能优化-SparseArray替代HashMap </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/2015/11/29/2015-11-29-genymotion模拟器安装说明/">
-            <h3 class="post-item-title">
-            	<a href="/2015/11/29/2015-11-29-genymotion模拟器安装说明/"> 安装genymotion模拟器的使用注意事项 </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/2015/11/27/2015-11-27-android-touch/">
-            <h3 class="post-item-title">
-            	<a href="/2015/11/27/2015-11-27-android-touch/"> Android-判断当前是否触摸到view </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/2015/11/25/2015-11-25-android-dialog-backkey/">
-            <h3 class="post-item-title">
-            	<a href="/2015/11/25/2015-11-25-android-dialog-backkey/"> Android-屏蔽back键，保证在点击back键时Dialog对话框不会消失 </a>
-            </h3>  
-          </li>
-        
-    </ul>
-  </div>
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2016/05/20</span>
+        </span>
+    
 </div>
+
+            
+            
+            <p class="fa fa-exclamation-triangle warning">
+                本文于<strong>730</strong>天之前发表，文中内容可能已经过时。
+            </p>
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>本人是搞Java、Android开发的，有编程基础。python是刚刚起步学习，在看完《Head first python》这本书后，一直想做一个项目练练手，思来想去不知道做python什么项目好，看网上大家都在玩爬虫。所以自己也花了一个晚上的时间写了个抓取“妹子图片”的爬虫，养眼的福利噢<br>大家需要注意博主用的是Python3.x 。</p>
+<p>先上截图，看看成果：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1987130-d1ebf037ca2ab456.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/365" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1987130-745f4ef49137db2e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt=""></p>
+<h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><ol>
+<li><strong>找个图片网站，分析它页面上的HTML源代码，提取HTML源代码中有用信息（图片链接、名称）</strong> </li>
+<li>下载图片到本地  </li>
+</ol>
+<h5 id="详细过程"><a href="#详细过程" class="headerlink" title="详细过程"></a>详细过程</h5><p>分析网站，我们浏览器F12，进入开发者模式，通过箭头查找模式找到图片显示区域的父容器:</p>
+<p>这个标签内有好多个标签，li标签内部有标签，我们要提取的内容就是href的地址（即相册地址），以及相册描述</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1987130-4b03e609d1480fcb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt=""></p>
+<p>光有相册的信息还不够，我们还要去相册的网页看一下，把相册里面的所有图片链接给提取出来。 </p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1987130-2573b1e58ebba83a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt=""></p>
+<p>分析该页面，我们发现它的html源代码中有<div class="pagenavi">这个地方就是相册内图片的导航区域（即</div></p>
+<p>上下图页面，这里每一个图片显示在一个对应的页面)。</p>
+<p>代码中，我们要把相册的图片总数给拿到，即上图“51”，表示最后一张图片。</p>
+<p>它的每一张图片对应的网页都是有规律的：</p>
+<p><a href="http://www.mzitu.com/62728" target="_blank" rel="external">http://www.mzitu.com/62728</a></p>
+<p><a href="http://www.mzitu.com/62728/2" target="_blank" rel="external">http://www.mzitu.com/62728/2</a></p>
+<p>………</p>
+<p><a href="http://www.mzitu.com/62728/51" target="_blank" rel="external">http://www.mzitu.com/62728/51</a></p>
+<p>发现了吗，我们只需要拿到总图片个数，然后代码中拼接一下，<strong>生成51个网页路径即可</strong>。</p>
+<p>然后我们对分别对着51个页面解析html源代码，提取出<strong>图片的路径</strong></p>
+<p>代码我已经写好了，看官们可以访问代码仓：<a href="https://link.jianshu.com?t=https://github.com/JadenTseng/python-get-girl-image" target="_blank" rel="external">https://github.com/JadenTseng/python-get-girl-image</a></p>
+<p>获取。</p>
+<h4 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h4><p>因为没有GUI图像化界面，就不能发给非程序员的小伙伴分享成果，自己也想接触一下python的图形化界面开发，于是就使用了PyQt来实现咱们的妹子图图形化界面版本，代码已经追加到了项目中。喜欢的小伙伴们可以start、fork。 </p>
+<p>上一张效果图给大家： </p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1987130-3a1b646555bb44e6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt=""></p>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="http://github.com/jadentseng" target="_blank">JadenTseng</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/2016/02/27/python-运算符/" class="next-post btn btn-default" title='python-运算符'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">python-运算符</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+   <p>评论系统未开启，无法评论！</p>
+
+    </div>
 
 
 
