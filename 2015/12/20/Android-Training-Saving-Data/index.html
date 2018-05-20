@@ -136,8 +136,8 @@
     
     <span class="categories-meta fa-wrap">
         <i class="fa fa-folder-open-o"></i>
-        <a href="/categories/Android">
-            Android
+        <a href="/categories/android">
+            android
         </a>
     </span>
     
@@ -147,8 +147,8 @@
         <span class="tags-meta">
             
                 
-                    <a href="/tags/Android" title='Android'>
-                        Android
+                    <a href="/tags/android" title='android'>
+                        android
                     </a>
                 
             
@@ -175,64 +175,20 @@
     
     <div class="post-body post-content">
         <h3 id="保存数据"><a href="#保存数据" class="headerlink" title="保存数据"></a>保存数据</h3><ol>
-<li><p><strong>SharedPreferences</strong><br>如果你是通过<strong>Context.MODE_WORLD_READABLE</strong> 或 <strong>Context.MODE_WORLD_WRITEABLE</strong><br>创建的SharedPreferences配置文件, 那么其他应用程序都将被允许访问您的该配置文件。<br>如果您只想本应用自己内部使用这个配置文件，那你可以使用Context.MODE_PRIVATE。<br>例如:  </p>
-<pre><code class="java">SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
-</code></pre>
-<p><strong>写入Shared Preferences</strong><br>需要创建SharedPreferences.Editor对象用来写入数据，可以通过SharedPreferences调用其edit()方法得到。<br>然后调用editor一系列的put函数，例如putInt、putString等。<br>例如：  </p>
-<pre><code class="java">SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
-SharedPreferences.Editor editor = sharedPref.edit();
-editor.putInt(getString(R.string.saved_high_score), newHighScore);
-editor.commit();
-</code></pre>
-<p><strong>读取Shared Preferences</strong><br>想要读取Shared Preferences文件中的数据，可以通过SharedPreferences提供的一系列get函数，<br>例如getInt、getString等。  </p>
-<pre><code class="java">SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
-<span class="keyword">int</span> defaultValue = getResources().getInteger(R.string.saved_high_score_default);
-<span class="keyword">long</span> highScore = sharedPref.getInt(getString(R.string.saved_high_score), defaultValue);
-</code></pre>
-</li>
-<li><p><strong>保存文件</strong><br>读和写文件，都需要在AndroidManifest.xml中声明相应的权限。<br><strong>读权限：</strong>  </p>
-<pre><code class="xml"><span class="tag">&lt;<span class="name">manifest</span> <span class="attr">...</span>&gt;</span>
-<span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.WRITE_EXTERNAL_STORAGE"</span> /&gt;</span>
-...
-<span class="tag">&lt;/<span class="name">manifest</span>&gt;</span>
-</code></pre>
-<p><strong>写权限：</strong>  </p>
-<pre><code class="xml"><span class="tag">&lt;<span class="name">manifest</span> <span class="attr">...</span>&gt;</span>
-<span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.READ_EXTERNAL_STORAGE"</span> /&gt;</span>
-...
-<span class="tag">&lt;/<span class="name">manifest</span>&gt;</span>
-</code></pre>
-<p><strong>保存文件到内部存储</strong><br>获得适当的目录，你可以通过如下方式：<br>context.getFilesDir()  为您的应用程序返回一个内部文件目录<br>context.getCacheDir()  返回一个app的临时缓存的内部文件目录。<br><strong>保存文件到外部存储</strong><br>要使用外部存储首先要知道是否可以读写：  </p>
-<pre><code class="java"><span class="comment">/* 检查外部存储是否可读写 */</span>
-<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isExternalStorageWritable</span><span class="params">()</span> </span>{
-    String state = Environment.getExternalStorageState();
-    <span class="keyword">if</span> (Environment.MEDIA_MOUNTED.equals(state)) {
-        <span class="keyword">return</span> <span class="keyword">true</span>;
-    }
-    <span class="keyword">return</span> <span class="keyword">false</span>;
-}
-
-<span class="comment">/* 检查外部存储是否可读 */</span>
-<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isExternalStorageReadable</span><span class="params">()</span> </span>{
-    String state = Environment.getExternalStorageState();
-    <span class="keyword">if</span> (Environment.MEDIA_MOUNTED.equals(state) ||
-        Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
-        <span class="keyword">return</span> <span class="keyword">true</span>;
-    }
-    <span class="keyword">return</span> <span class="keyword">false</span>;
-}
-</code></pre>
-<p>另外要得到外部存储目录, 可以使用如下代码：</p>
-<pre><code class="java">context.getExternalFilesDir();  
-
-context.getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-</code></pre>
-<p>直接得到外部存储公共目录, 例如得到公共图片库目录：  </p>
-<pre><code class="java">Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
-</code></pre>
-<p>还可以使用DIRECTORY_MUSIC、DIRECTORY_RINGTONES等公共目录。  </p>
+<li><strong>SharedPreferences</strong><br>如果你是通过<strong>Context.MODE_WORLD_READABLE</strong> 或 <strong>Context.MODE_WORLD_WRITEABLE</strong><br>创建的SharedPreferences配置文件, 那么其他应用程序都将被允许访问您的该配置文件。<br>如果您只想本应用自己内部使用这个配置文件，那你可以使用Context.MODE_PRIVATE。<br>例如:  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);</div></pre></td></tr></table></figure>
 </li>
 </ol>
+<p><strong>写入Shared Preferences</strong><br>需要创建SharedPreferences.Editor对象用来写入数据，可以通过SharedPreferences调用其edit()方法得到。<br>然后调用editor一系列的put函数，例如putInt、putString等。<br>例如：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);</div><div class="line">SharedPreferences.Editor editor = sharedPref.edit();</div><div class="line">editor.putInt(getString(R.string.saved_high_score), newHighScore);</div><div class="line">editor.commit();</div></pre></td></tr></table></figure></p>
+<p><strong>读取Shared Preferences</strong><br>想要读取Shared Preferences文件中的数据，可以通过SharedPreferences提供的一系列get函数，<br>例如getInt、getString等。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);</div><div class="line"><span class="keyword">int</span> defaultValue = getResources().getInteger(R.string.saved_high_score_default);</div><div class="line"><span class="keyword">long</span> highScore = sharedPref.getInt(getString(R.string.saved_high_score), defaultValue);</div></pre></td></tr></table></figure></p>
+<ol>
+<li><strong>保存文件</strong><br>读和写文件，都需要在AndroidManifest.xml中声明相应的权限。<br><strong>读权限：</strong>  <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">manifest</span> <span class="attr">...</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.WRITE_EXTERNAL_STORAGE"</span> /&gt;</span></div><div class="line">...</div><div class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>写权限：</strong><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">manifest</span> <span class="attr">...</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.READ_EXTERNAL_STORAGE"</span> /&gt;</span></div><div class="line">...</div><div class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>保存文件到内部存储</strong><br>获得适当的目录，你可以通过如下方式：<br>context.getFilesDir()  为您的应用程序返回一个内部文件目录<br>context.getCacheDir()  返回一个app的临时缓存的内部文件目录。<br><strong>保存文件到外部存储</strong><br>要使用外部存储首先要知道是否可以读写：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 检查外部存储是否可读写 */</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isExternalStorageWritable</span><span class="params">()</span> </span>&#123;</div><div class="line">    String state = Environment.getExternalStorageState();</div><div class="line">    <span class="keyword">if</span> (Environment.MEDIA_MOUNTED.equals(state)) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/* 检查外部存储是否可读 */</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isExternalStorageReadable</span><span class="params">()</span> </span>&#123;</div><div class="line">    String state = Environment.getExternalStorageState();</div><div class="line">    <span class="keyword">if</span> (Environment.MEDIA_MOUNTED.equals(state) ||</div><div class="line">        Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>另外要得到外部存储目录, 可以使用如下代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">context.getExternalFilesDir();  </div><div class="line"></div><div class="line">context.getExternalFilesDir(Environment.DIRECTORY_PICTURES);</div></pre></td></tr></table></figure></p>
+<p>直接得到外部存储公共目录, 例如得到公共图片库目录：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);</div></pre></td></tr></table></figure></p>
+<p>还可以使用DIRECTORY_MUSIC、DIRECTORY_RINGTONES等公共目录。  </p>
 
     </div>
 
@@ -346,7 +302,7 @@ context.getExternalFilesDir(Environment.DIRECTORY_PICTURES);
         
     <div class="widget">
         <h3 class="title">Categories</h3>
-        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/"><i class="fa" aria-hidden="true">Android</i></a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/"><i class="fa" aria-hidden="true">Python</i></a><span class="category-list-count">2</span></li></ul>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/android/"><i class="fa" aria-hidden="true">android</i></a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/"><i class="fa" aria-hidden="true">python</i></a><span class="category-list-count">2</span></li></ul>
     </div>
 
 
@@ -363,7 +319,7 @@ context.getExternalFilesDir(Environment.DIRECTORY_PICTURES);
   <div class="widget">
     <h3 class="title">Tag Cloud</h3>
     <div class="content tag-cloud">
-        <a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Fragment/" style="font-size: 10px;">Fragment</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/View/" style="font-size: 10px;">View</a> <a href="/tags/性能优化/" style="font-size: 10px;">性能优化</a> <a href="/tags/模拟器/" style="font-size: 10px;">模拟器</a> <a href="/tags/爬虫/" style="font-size: 10px;">爬虫</a>
+        <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Fragment/" style="font-size: 10px;">Fragment</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/view/" style="font-size: 10px;">view</a> <a href="/tags/性能优化/" style="font-size: 10px;">性能优化</a> <a href="/tags/模拟器/" style="font-size: 10px;">模拟器</a> <a href="/tags/爬虫/" style="font-size: 10px;">爬虫</a>
     </div>
   </div>
 

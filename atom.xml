@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhenggang.ink/"/>
-  <updated>2018-05-20T13:43:38.170Z</updated>
+  <updated>2018-05-20T13:53:28.026Z</updated>
   <id>http://zhenggang.ink/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://zhenggang.ink/2016/05/20/python-%E7%88%AC%E5%8F%96%E5%A6%B9%E5%AD%90%E5%9B%BE/"/>
     <id>http://zhenggang.ink/2016/05/20/python-爬取妹子图/</id>
     <published>2016-05-20T13:34:41.000Z</published>
-    <updated>2018-05-20T13:43:38.170Z</updated>
+    <updated>2018-05-20T13:53:28.026Z</updated>
     
     <content type="html"><![CDATA[<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>本人是搞Java、Android开发的，有编程基础。python是刚刚起步学习，在看完《Head first python》这本书后，一直想做一个项目练练手，思来想去不知道做python什么项目好，看网上大家都在玩爬虫。所以自己也花了一个晚上的时间写了个抓取“妹子图片”的爬虫，养眼的福利噢<br>大家需要注意博主用的是Python3.x 。</p><p>先上截图，看看成果：</p><p><img src="https://upload-images.jianshu.io/upload_images/1987130-d1ebf037ca2ab456.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/365" alt=""></p><p><img src="https://upload-images.jianshu.io/upload_images/1987130-745f4ef49137db2e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt=""></p><h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><ol><li><strong>找个图片网站，分析它页面上的HTML源代码，提取HTML源代码中有用信息（图片链接、名称）</strong> </li><li>下载图片到本地  </li></ol><h5 id="详细过程"><a href="#详细过程" class="headerlink" title="详细过程"></a>详细过程</h5><p>分析网站，我们浏览器F12，进入开发者模式，通过箭头查找模式找到图片显示区域的父容器:</p><p>这个标签内有好多个标签，li标签内部有标签，我们要提取的内容就是href的地址（即相册地址），以及相册描述</p><p><img src="https://upload-images.jianshu.io/upload_images/1987130-4b03e609d1480fcb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt=""></p><p>光有相册的信息还不够，我们还要去相册的网页看一下，把相册里面的所有图片链接给提取出来。 </p><p><img src="https://upload-images.jianshu.io/upload_images/1987130-2573b1e58ebba83a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt=""></p><p>分析该页面，我们发现它的html源代码中有<div class="pagenavi">这个地方就是相册内图片的导航区域（即</div></p><p>上下图页面，这里每一个图片显示在一个对应的页面)。</p><p>代码中，我们要把相册的图片总数给拿到，即上图“51”，表示最后一张图片。</p><p>它的每一张图片对应的网页都是有规律的：</p><p><a href="http://www.mzitu.com/62728" target="_blank" rel="external">http://www.mzitu.com/62728</a></p><p><a href="http://www.mzitu.com/62728/2" target="_blank" rel="external">http://www.mzitu.com/62728/2</a></p><p>………</p><p><a href="http://www.mzitu.com/62728/51" target="_blank" rel="external">http://www.mzitu.com/62728/51</a></p><p>发现了吗，我们只需要拿到总图片个数，然后代码中拼接一下，<strong>生成51个网页路径即可</strong>。</p><p>然后我们对分别对着51个页面解析html源代码，提取出<strong>图片的路径</strong></p><p>代码我已经写好了，看官们可以访问代码仓：<a href="https://link.jianshu.com?t=https://github.com/JadenTseng/python-get-girl-image" target="_blank" rel="external">https://github.com/JadenTseng/python-get-girl-image</a></p><p>获取。</p><h4 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h4><p>因为没有GUI图像化界面，就不能发给非程序员的小伙伴分享成果，自己也想接触一下python的图形化界面开发，于是就使用了PyQt来实现咱们的妹子图图形化界面版本，代码已经追加到了项目中。喜欢的小伙伴们可以start、fork。 </p><p>上一张效果图给大家： </p><p><img src="https://upload-images.jianshu.io/upload_images/1987130-3a1b646555bb44e6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt=""></p>]]></content>
     
@@ -34,10 +34,10 @@
     
     </summary>
     
-      <category term="Python" scheme="http://zhenggang.ink/categories/Python/"/>
+      <category term="python" scheme="http://zhenggang.ink/categories/python/"/>
     
     
-      <category term="Python" scheme="http://zhenggang.ink/tags/Python/"/>
+      <category term="python" scheme="http://zhenggang.ink/tags/python/"/>
     
       <category term="爬虫" scheme="http://zhenggang.ink/tags/%E7%88%AC%E8%99%AB/"/>
     
@@ -48,7 +48,7 @@
     <link href="http://zhenggang.ink/2016/02/27/python-%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
     <id>http://zhenggang.ink/2016/02/27/python-运算符/</id>
     <published>2016-02-27T14:17:32.000Z</published>
-    <updated>2016-09-11T07:10:52.793Z</updated>
+    <updated>2018-05-20T13:53:33.808Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="comment"># 6: 00000110</span></div><div class="line"><span class="comment"># 11 00001011</span></div><div class="line"></div><div class="line">a = <span class="number">6</span>|<span class="number">11</span></div><div class="line">print(a) <span class="comment"># 15（00001111） 有一个1则为1</span></div><div class="line"></div><div class="line">b = <span class="number">6</span>&amp;<span class="number">11</span></div><div class="line">print(b); <span class="comment"># 2（00000010） 两个都是1则为1</span></div><div class="line"></div><div class="line">c = <span class="number">6</span>^<span class="number">11</span></div><div class="line">print(c) <span class="comment"># 13（00001101） 两个相同则为0，不同则为1</span></div><div class="line"></div><div class="line"><span class="comment"># 左移</span></div><div class="line">e = <span class="number">6</span> &lt;&lt; <span class="number">4</span></div><div class="line">print(e) <span class="comment"># 6*(2*4) = 96 , 6乘以2的4次幂</span></div><div class="line"></div><div class="line"><span class="comment"># 右移</span></div><div class="line">f = <span class="number">96</span> &gt;&gt; <span class="number">2</span> <span class="comment"># 96/(2*2) = 24 , 96除以2的2次幂</span></div><div class="line">print(f)</div></pre></td></tr></table></figure>]]></content>
     
@@ -61,7 +61,7 @@
     
     </summary>
     
-      <category term="Python" scheme="http://zhenggang.ink/categories/Python/"/>
+      <category term="python" scheme="http://zhenggang.ink/categories/python/"/>
     
     
       <category term="Python" scheme="http://zhenggang.ink/tags/Python/"/>
@@ -73,7 +73,7 @@
     <link href="http://zhenggang.ink/2016/02/27/android-Fragment-repace/"/>
     <id>http://zhenggang.ink/2016/02/27/android-Fragment-repace/</id>
     <published>2016-02-27T12:12:16.000Z</published>
-    <updated>2016-09-11T07:10:52.793Z</updated>
+    <updated>2018-05-20T13:53:43.817Z</updated>
     
     <content type="html"><![CDATA[<p>  最近在做一个项目，开始我的界面使用的是原生Activity+原生Fragment。两个Fragment之间来回切换，界面只显示一个Fragment。这回用到ft.replace方法同时设置了setCustomAnimation。结果发现Fragment在切换的过程中出现一瞬间的重叠，老是找不出来原因。后来，网上查了一些资料，说使用V4包，因为V4包考虑到了兼容性，并且ft的setCustomAnimation是使用的Animator的translate。<br> 于是换了一下实现，结果发现还真没有出现卡顿重叠了。在此记录一下，备忘。</p>]]></content>
     
@@ -86,7 +86,7 @@
     
     </summary>
     
-      <category term="Android" scheme="http://zhenggang.ink/categories/Android/"/>
+      <category term="android" scheme="http://zhenggang.ink/categories/android/"/>
     
     
       <category term="Android" scheme="http://zhenggang.ink/tags/Android/"/>
@@ -100,24 +100,24 @@
     <link href="http://zhenggang.ink/2015/12/20/Android-Training-Saving-Data/"/>
     <id>http://zhenggang.ink/2015/12/20/Android-Training-Saving-Data/</id>
     <published>2015-12-20T15:26:00.000Z</published>
-    <updated>2016-09-15T11:15:58.686Z</updated>
+    <updated>2018-05-20T13:53:39.903Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="保存数据"><a href="#保存数据" class="headerlink" title="保存数据"></a>保存数据</h3><ol><li><p><strong>SharedPreferences</strong><br>如果你是通过<strong>Context.MODE_WORLD_READABLE</strong> 或 <strong>Context.MODE_WORLD_WRITEABLE</strong><br>创建的SharedPreferences配置文件, 那么其他应用程序都将被允许访问您的该配置文件。<br>如果您只想本应用自己内部使用这个配置文件，那你可以使用Context.MODE_PRIVATE。<br>例如:  </p><pre><code class="java">SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);</code></pre><p><strong>写入Shared Preferences</strong><br>需要创建SharedPreferences.Editor对象用来写入数据，可以通过SharedPreferences调用其edit()方法得到。<br>然后调用editor一系列的put函数，例如putInt、putString等。<br>例如：  </p><pre><code class="java">SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);SharedPreferences.Editor editor = sharedPref.edit();editor.putInt(getString(R.string.saved_high_score), newHighScore);editor.commit();</code></pre><p><strong>读取Shared Preferences</strong><br>想要读取Shared Preferences文件中的数据，可以通过SharedPreferences提供的一系列get函数，<br>例如getInt、getString等。  </p><pre><code class="java">SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);<span class="keyword">int</span> defaultValue = getResources().getInteger(R.string.saved_high_score_default);<span class="keyword">long</span> highScore = sharedPref.getInt(getString(R.string.saved_high_score), defaultValue);</code></pre></li><li><p><strong>保存文件</strong><br>读和写文件，都需要在AndroidManifest.xml中声明相应的权限。<br><strong>读权限：</strong>  </p><pre><code class="xml"><span class="tag">&lt;<span class="name">manifest</span> <span class="attr">...</span>&gt;</span><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.WRITE_EXTERNAL_STORAGE"</span> /&gt;</span>...<span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></code></pre><p><strong>写权限：</strong>  </p><pre><code class="xml"><span class="tag">&lt;<span class="name">manifest</span> <span class="attr">...</span>&gt;</span><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.READ_EXTERNAL_STORAGE"</span> /&gt;</span>...<span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></code></pre><p><strong>保存文件到内部存储</strong><br>获得适当的目录，你可以通过如下方式：<br>context.getFilesDir()  为您的应用程序返回一个内部文件目录<br>context.getCacheDir()  返回一个app的临时缓存的内部文件目录。<br><strong>保存文件到外部存储</strong><br>要使用外部存储首先要知道是否可以读写：  </p><pre><code class="java"><span class="comment">/* 检查外部存储是否可读写 */</span><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isExternalStorageWritable</span><span class="params">()</span> </span>{    String state = Environment.getExternalStorageState();    <span class="keyword">if</span> (Environment.MEDIA_MOUNTED.equals(state)) {        <span class="keyword">return</span> <span class="keyword">true</span>;    }    <span class="keyword">return</span> <span class="keyword">false</span>;}<span class="comment">/* 检查外部存储是否可读 */</span><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isExternalStorageReadable</span><span class="params">()</span> </span>{    String state = Environment.getExternalStorageState();    <span class="keyword">if</span> (Environment.MEDIA_MOUNTED.equals(state) ||        Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {        <span class="keyword">return</span> <span class="keyword">true</span>;    }    <span class="keyword">return</span> <span class="keyword">false</span>;}</code></pre><p>另外要得到外部存储目录, 可以使用如下代码：</p><pre><code class="java">context.getExternalFilesDir();  context.getExternalFilesDir(Environment.DIRECTORY_PICTURES);</code></pre><p>直接得到外部存储公共目录, 例如得到公共图片库目录：  </p><pre><code class="java">Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);</code></pre><p>还可以使用DIRECTORY_MUSIC、DIRECTORY_RINGTONES等公共目录。  </p></li></ol>]]></content>
+    <content type="html"><![CDATA[<h3 id="保存数据"><a href="#保存数据" class="headerlink" title="保存数据"></a>保存数据</h3><ol><li><strong>SharedPreferences</strong><br>如果你是通过<strong>Context.MODE_WORLD_READABLE</strong> 或 <strong>Context.MODE_WORLD_WRITEABLE</strong><br>创建的SharedPreferences配置文件, 那么其他应用程序都将被允许访问您的该配置文件。<br>如果您只想本应用自己内部使用这个配置文件，那你可以使用Context.MODE_PRIVATE。<br>例如:  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);</div></pre></td></tr></table></figure></li></ol><p><strong>写入Shared Preferences</strong><br>需要创建SharedPreferences.Editor对象用来写入数据，可以通过SharedPreferences调用其edit()方法得到。<br>然后调用editor一系列的put函数，例如putInt、putString等。<br>例如：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);</div><div class="line">SharedPreferences.Editor editor = sharedPref.edit();</div><div class="line">editor.putInt(getString(R.string.saved_high_score), newHighScore);</div><div class="line">editor.commit();</div></pre></td></tr></table></figure></p><p><strong>读取Shared Preferences</strong><br>想要读取Shared Preferences文件中的数据，可以通过SharedPreferences提供的一系列get函数，<br>例如getInt、getString等。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);</div><div class="line"><span class="keyword">int</span> defaultValue = getResources().getInteger(R.string.saved_high_score_default);</div><div class="line"><span class="keyword">long</span> highScore = sharedPref.getInt(getString(R.string.saved_high_score), defaultValue);</div></pre></td></tr></table></figure></p><ol><li><strong>保存文件</strong><br>读和写文件，都需要在AndroidManifest.xml中声明相应的权限。<br><strong>读权限：</strong>  <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">manifest</span> <span class="attr">...</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.WRITE_EXTERNAL_STORAGE"</span> /&gt;</span></div><div class="line">...</div><div class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></div></pre></td></tr></table></figure></li></ol><p><strong>写权限：</strong><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">manifest</span> <span class="attr">...</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.READ_EXTERNAL_STORAGE"</span> /&gt;</span></div><div class="line">...</div><div class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></div></pre></td></tr></table></figure></p><p><strong>保存文件到内部存储</strong><br>获得适当的目录，你可以通过如下方式：<br>context.getFilesDir()  为您的应用程序返回一个内部文件目录<br>context.getCacheDir()  返回一个app的临时缓存的内部文件目录。<br><strong>保存文件到外部存储</strong><br>要使用外部存储首先要知道是否可以读写：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 检查外部存储是否可读写 */</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isExternalStorageWritable</span><span class="params">()</span> </span>&#123;</div><div class="line">    String state = Environment.getExternalStorageState();</div><div class="line">    <span class="keyword">if</span> (Environment.MEDIA_MOUNTED.equals(state)) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/* 检查外部存储是否可读 */</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isExternalStorageReadable</span><span class="params">()</span> </span>&#123;</div><div class="line">    String state = Environment.getExternalStorageState();</div><div class="line">    <span class="keyword">if</span> (Environment.MEDIA_MOUNTED.equals(state) ||</div><div class="line">        Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p>另外要得到外部存储目录, 可以使用如下代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">context.getExternalFilesDir();  </div><div class="line"></div><div class="line">context.getExternalFilesDir(Environment.DIRECTORY_PICTURES);</div></pre></td></tr></table></figure></p><p>直接得到外部存储公共目录, 例如得到公共图片库目录：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);</div></pre></td></tr></table></figure></p><p>还可以使用DIRECTORY_MUSIC、DIRECTORY_RINGTONES等公共目录。  </p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;h3 id=&quot;保存数据&quot;&gt;&lt;a href=&quot;#保存数据&quot; class=&quot;headerlink&quot; title=&quot;保存数据&quot;&gt;&lt;/a&gt;保存数据&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;SharedPreferences&lt;/strong&gt;&lt;br&gt;如果你是通过&lt;strong&gt;C
+&lt;li&gt;&lt;strong&gt;SharedPreferences&lt;/strong&gt;&lt;br&gt;如果你是通过&lt;strong&gt;Cont
       
     
     </summary>
     
-      <category term="Android" scheme="http://zhenggang.ink/categories/Android/"/>
+      <category term="android" scheme="http://zhenggang.ink/categories/android/"/>
     
     
-      <category term="Android" scheme="http://zhenggang.ink/tags/Android/"/>
+      <category term="android" scheme="http://zhenggang.ink/tags/android/"/>
     
   </entry>
   
@@ -126,7 +126,7 @@
     <link href="http://zhenggang.ink/2015/11/30/2015-11-30-Android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-SparseArray%E6%9B%BF%E4%BB%A3HashMap/"/>
     <id>http://zhenggang.ink/2015/11/30/2015-11-30-Android性能优化-SparseArray替代HashMap/</id>
     <published>2015-11-30T12:00:00.000Z</published>
-    <updated>2016-09-11T07:10:52.791Z</updated>
+    <updated>2018-05-20T13:53:48.889Z</updated>
     
     <content type="html"><![CDATA[<p>Android提供了 <strong> SparseArray </strong> 类，并推荐让你在数据量不大的情况下尽可能的使用它，来替代HashMap<integer, object="">。它内部使用了两个数组分别记录key, value. 它的目的就是为了高效性能，它采用二分查找算法，关键代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> start, <span class="keyword">int</span> len, <span class="keyword">int</span> key)</span> </span>&#123;</div><div class="line"><span class="keyword">int</span> high = start + len, low = start - <span class="number">1</span>, guess;</div><div class="line"><span class="keyword">while</span> (high - low &gt; <span class="number">1</span>) &#123;</div><div class="line">    guess = (high + low) / <span class="number">2</span>;</div><div class="line">    <span class="keyword">if</span> (a[guess] &lt; key)</div><div class="line">        low = guess;</div><div class="line">    <span class="keyword">else</span></div><div class="line">        high = guess;</div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span> (high == start + len)</div><div class="line">    <span class="keyword">return</span> ~(start + len);</div><div class="line"><span class="keyword">else</span> <span class="keyword">if</span> (a[high] == key)</div><div class="line">    <span class="keyword">return</span> high;</div><div class="line"><span class="keyword">else</span></div><div class="line">    <span class="keyword">return</span> ~high;</div><div class="line">&#125;</div></pre></td></tr></table></figure></integer,></p><p> <strong> SparseArray </strong>还派生了如 <strong> SparseIntArray </strong> 等子类，从 SparseIntArray字面意思上就可以看出它省去了自动装箱(int 转为 Integer) 所以更加节省内存。</p>]]></content>
     
@@ -139,10 +139,10 @@
     
     </summary>
     
-      <category term="Android" scheme="http://zhenggang.ink/categories/Android/"/>
+      <category term="android" scheme="http://zhenggang.ink/categories/android/"/>
     
     
-      <category term="Android" scheme="http://zhenggang.ink/tags/Android/"/>
+      <category term="android" scheme="http://zhenggang.ink/tags/android/"/>
     
       <category term="性能优化" scheme="http://zhenggang.ink/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
@@ -153,7 +153,7 @@
     <link href="http://zhenggang.ink/2015/11/29/2015-11-29-genymotion%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%AE%89%E8%A3%85%E8%AF%B4%E6%98%8E/"/>
     <id>http://zhenggang.ink/2015/11/29/2015-11-29-genymotion模拟器安装说明/</id>
     <published>2015-11-29T12:59:00.000Z</published>
-    <updated>2016-09-16T07:20:41.519Z</updated>
+    <updated>2018-05-20T13:53:55.430Z</updated>
     
     <content type="html"><![CDATA[<ol><li><h4 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h4><blockquote><p> 首先需要去genymotion的 <a href="https://www.genymotion.com/" target="_blank" rel="external">官方网站</a>  注册一个账号，这样才可以下载并使用genymotion程序</p></blockquote></li><li><h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><p>在官网上下载该软件时会有几个版本，供你选择，如果你的电脑上没有安装oracle公司的VM VirtualBox，请下载包含了VM VirtualBox版本的附件，如果你的电脑之前有装过VM VirtualBox，那么你可以选择下载 without vmbox的版本。<br>博主这里下载了一个含虚拟机的genymotion版本，下载地址：<a href="http://pan.baidu.com/s/1pJzTeT9" title="附件链接内带genymotion安装程序" target="_blank" rel="external">http://pan.baidu.com/s/1bnDiMBX</a>   请先别急着下载，看完这篇文章后再下载，可以帮助你了解附件内的文件都是起到什么作用的。</p><a id="more"></a></li><li><h4 id="安装并设置"><a href="#安装并设置" class="headerlink" title="安装并设置"></a>安装并设置</h4><p>安装的时候直接下一步即可，需要安装虚拟机的也一并安装上。保证Genymotion 和 VM VirtualBox 安装完毕后，双击启动Genymotion应用程序。</p><ul><li><p>来到主界面<br><img src="http://odktdrvcs.bkt.clouddn.com/genymotion-1.png" alt="主界面"></p></li><li><p>请点击Settings按钮，选择ADB选项卡，进行设置你电脑当前的Android SDK Path。<br><img src="http://odktdrvcs.bkt.clouddn.com/genymotion-2.png" alt="设置Android SDK路径"></p></li><li><p>点击主界面上的Add按钮，新建一个模拟器，但是需要你先登录genymotion上注册的账号,登录成功后即可选择你需要的模拟器。<br><img src="http://odktdrvcs.bkt.clouddn.com/genymotion-3.png" alt="登录创建模拟器"></p></li><li><p>点击选中你创建的模拟器，然后点击上方的Start按钮，运行你创建的模拟器。<br><img src="http://odktdrvcs.bkt.clouddn.com/genymotion-4.png" alt="启动模拟器"></p></li></ul><p>至此，模拟器基本可以运行起来了，运行不起来的话，可能会出现can not start的提示信息。这个错误是你的电脑上的C:/windows/systemui32路径下的uxtheme.dll、themeservice.dll、themeui.dll文件在你电脑破解主题的时候被替换过。除非你的是原装系统，否则使用第三方的破解过主题的系统的可能会出现上面的问题。 那么，怎么修复这个问题呢。<br>解决办法，请下载文章上面的附件，里面有详细解决说明。解决后，这时再Start模拟器，即可启动。</p></li><li><h4 id="运行起来的模拟器，使用adb-shell命令居然找不到设备？"><a href="#运行起来的模拟器，使用adb-shell命令居然找不到设备？" class="headerlink" title="运行起来的模拟器，使用adb shell命令居然找不到设备？"></a>运行起来的模拟器，使用adb shell命令居然找不到设备？</h4><p>别急，这是由于android版本不断升级带来的问题，解决办法同样见文章上面附件（附件内包含了一个zip的文件包），将这个zip文件包用鼠标拖放到电脑当前运行起来的模拟器里，模拟器里就会出现一个对话框，点击ok，更新完毕后，重新启动你的模拟器即可解决此问题。</p></li></ol>]]></content>
     
@@ -168,10 +168,10 @@
     
     </summary>
     
-      <category term="Android" scheme="http://zhenggang.ink/categories/Android/"/>
+      <category term="android" scheme="http://zhenggang.ink/categories/android/"/>
     
     
-      <category term="Android" scheme="http://zhenggang.ink/tags/Android/"/>
+      <category term="android" scheme="http://zhenggang.ink/tags/android/"/>
     
       <category term="模拟器" scheme="http://zhenggang.ink/tags/%E6%A8%A1%E6%8B%9F%E5%99%A8/"/>
     
@@ -182,7 +182,7 @@
     <link href="http://zhenggang.ink/2015/11/27/2015-11-27-android-touch/"/>
     <id>http://zhenggang.ink/2015/11/27/2015-11-27-android-touch/</id>
     <published>2015-11-27T14:22:41.000Z</published>
-    <updated>2016-09-11T07:12:29.695Z</updated>
+    <updated>2018-05-20T13:54:00.251Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">inTouchInslideOfView</span><span class="params">(View view, MotionEvent ev)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span>[] location = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>];</div><div class="line">    view.getLocationInWindow(location);</div><div class="line">    <span class="keyword">int</span> x = location[<span class="number">0</span>];</div><div class="line">    <span class="keyword">int</span> y = location[<span class="number">1</span>];</div><div class="line">    <span class="keyword">if</span> (ev.getX() &gt; x &amp;&amp; ev.getX() &lt; (x + view.getWidth()) &amp;&amp; ev.getY() &gt; y &amp;&amp; ev.getY() &lt; (y + view.getHeight()))&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
     
@@ -195,12 +195,12 @@
     
     </summary>
     
-      <category term="Android" scheme="http://zhenggang.ink/categories/Android/"/>
+      <category term="android" scheme="http://zhenggang.ink/categories/android/"/>
     
     
-      <category term="Android" scheme="http://zhenggang.ink/tags/Android/"/>
+      <category term="android" scheme="http://zhenggang.ink/tags/android/"/>
     
-      <category term="View" scheme="http://zhenggang.ink/tags/View/"/>
+      <category term="view" scheme="http://zhenggang.ink/tags/view/"/>
     
   </entry>
   
@@ -209,7 +209,7 @@
     <link href="http://zhenggang.ink/2015/11/25/2015-11-25-android-dialog-backkey/"/>
     <id>http://zhenggang.ink/2015/11/25/2015-11-25-android-dialog-backkey/</id>
     <published>2015-11-25T13:23:11.000Z</published>
-    <updated>2016-09-11T07:10:52.788Z</updated>
+    <updated>2018-05-20T13:54:05.084Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">mSaveingProgressDialog.setOnKeyListener(mDialogOnKeylistener);    </div><div class="line"></div><div class="line">DialogInterface.OnKeyListener mDialogOnKeylistener = <span class="keyword">new</span> DialogInterface.OnKeyListener()&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onKey</span><span class="params">(DialogInterface dialog, <span class="keyword">int</span> keyCode, KeyEvent event)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (mSaveing) &#123;</div><div class="line">            <span class="keyword">if</span> (KeyEvent.KEYCODE_BACK == keyCode) &#123;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    &#125;</div><div class="line">&#125; ;</div></pre></td></tr></table></figure><p>即给对话框设置按键监听OnKeyListener，在onKey()方法中判断当前点击的按键是否是back键，如果是则return true</p>]]></content>
     
@@ -222,10 +222,10 @@
     
     </summary>
     
-      <category term="Android" scheme="http://zhenggang.ink/categories/Android/"/>
+      <category term="android" scheme="http://zhenggang.ink/categories/android/"/>
     
     
-      <category term="Android" scheme="http://zhenggang.ink/tags/Android/"/>
+      <category term="android" scheme="http://zhenggang.ink/tags/android/"/>
     
   </entry>
   
