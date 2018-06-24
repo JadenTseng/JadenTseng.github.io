@@ -5,9 +5,9 @@
   <subtitle>博观而约取，厚积而薄发。</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://zhenggang.ink/"/>
+  <link href="http://zgang.top/"/>
   <updated>2018-05-27T13:18:47.978Z</updated>
-  <id>http://zhenggang.ink/</id>
+  <id>http://zgang.top/</id>
   
   <author>
     <name>Jaden Tseng</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>python-爬虫</title>
-    <link href="http://zhenggang.ink/2016/05/20/python-%E7%88%AC%E5%8F%96%E5%A6%B9%E5%AD%90%E5%9B%BE/"/>
-    <id>http://zhenggang.ink/2016/05/20/python-爬取妹子图/</id>
+    <link href="http://zgang.top/2016/05/20/python-%E7%88%AC%E5%8F%96%E5%A6%B9%E5%AD%90%E5%9B%BE/"/>
+    <id>http://zgang.top/2016/05/20/python-爬取妹子图/</id>
     <published>2016-05-20T13:34:41.000Z</published>
     <updated>2018-05-27T13:18:47.978Z</updated>
     
@@ -34,19 +34,19 @@
     
     </summary>
     
-      <category term="python" scheme="http://zhenggang.ink/categories/python/"/>
+      <category term="python" scheme="http://zgang.top/categories/python/"/>
     
     
-      <category term="python" scheme="http://zhenggang.ink/tags/python/"/>
+      <category term="python" scheme="http://zgang.top/tags/python/"/>
     
-      <category term="爬虫" scheme="http://zhenggang.ink/tags/%E7%88%AC%E8%99%AB/"/>
+      <category term="爬虫" scheme="http://zgang.top/tags/%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
   <entry>
     <title>python-运算符</title>
-    <link href="http://zhenggang.ink/2016/02/27/python-%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
-    <id>http://zhenggang.ink/2016/02/27/python-运算符/</id>
+    <link href="http://zgang.top/2016/02/27/python-%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+    <id>http://zgang.top/2016/02/27/python-运算符/</id>
     <published>2016-02-27T14:17:32.000Z</published>
     <updated>2018-05-20T13:56:11.997Z</updated>
     
@@ -61,17 +61,17 @@
     
     </summary>
     
-      <category term="python" scheme="http://zhenggang.ink/categories/python/"/>
+      <category term="python" scheme="http://zgang.top/categories/python/"/>
     
     
-      <category term="python" scheme="http://zhenggang.ink/tags/python/"/>
+      <category term="python" scheme="http://zgang.top/tags/python/"/>
     
   </entry>
   
   <entry>
     <title>android原生Fragment在replace时切换动画过程中出现卡顿，界面重叠的问题</title>
-    <link href="http://zhenggang.ink/2016/02/27/android-Fragment-repace/"/>
-    <id>http://zhenggang.ink/2016/02/27/android-Fragment-repace/</id>
+    <link href="http://zgang.top/2016/02/27/android-Fragment-repace/"/>
+    <id>http://zgang.top/2016/02/27/android-Fragment-repace/</id>
     <published>2016-02-27T12:12:16.000Z</published>
     <updated>2018-05-20T13:56:35.536Z</updated>
     
@@ -86,19 +86,19 @@
     
     </summary>
     
-      <category term="android" scheme="http://zhenggang.ink/categories/android/"/>
+      <category term="android" scheme="http://zgang.top/categories/android/"/>
     
     
-      <category term="android" scheme="http://zhenggang.ink/tags/android/"/>
+      <category term="android" scheme="http://zgang.top/tags/android/"/>
     
-      <category term="fragment" scheme="http://zhenggang.ink/tags/fragment/"/>
+      <category term="fragment" scheme="http://zgang.top/tags/fragment/"/>
     
   </entry>
   
   <entry>
     <title>Android-Training-Saving Data</title>
-    <link href="http://zhenggang.ink/2015/12/20/Android-Training-Saving-Data/"/>
-    <id>http://zhenggang.ink/2015/12/20/Android-Training-Saving-Data/</id>
+    <link href="http://zgang.top/2015/12/20/Android-Training-Saving-Data/"/>
+    <id>http://zgang.top/2015/12/20/Android-Training-Saving-Data/</id>
     <published>2015-12-20T15:26:00.000Z</published>
     <updated>2018-05-20T13:56:26.341Z</updated>
     
@@ -114,17 +114,17 @@
     
     </summary>
     
-      <category term="android" scheme="http://zhenggang.ink/categories/android/"/>
+      <category term="android" scheme="http://zgang.top/categories/android/"/>
     
     
-      <category term="android" scheme="http://zhenggang.ink/tags/android/"/>
+      <category term="android" scheme="http://zgang.top/tags/android/"/>
     
   </entry>
   
   <entry>
     <title>Android性能优化-SparseArray替代HashMap</title>
-    <link href="http://zhenggang.ink/2015/11/30/2015-11-30-Android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-SparseArray%E6%9B%BF%E4%BB%A3HashMap/"/>
-    <id>http://zhenggang.ink/2015/11/30/2015-11-30-Android性能优化-SparseArray替代HashMap/</id>
+    <link href="http://zgang.top/2015/11/30/2015-11-30-Android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-SparseArray%E6%9B%BF%E4%BB%A3HashMap/"/>
+    <id>http://zgang.top/2015/11/30/2015-11-30-Android性能优化-SparseArray替代HashMap/</id>
     <published>2015-11-30T12:00:00.000Z</published>
     <updated>2018-05-20T13:53:48.889Z</updated>
     
@@ -139,19 +139,19 @@
     
     </summary>
     
-      <category term="android" scheme="http://zhenggang.ink/categories/android/"/>
+      <category term="android" scheme="http://zgang.top/categories/android/"/>
     
     
-      <category term="android" scheme="http://zhenggang.ink/tags/android/"/>
+      <category term="android" scheme="http://zgang.top/tags/android/"/>
     
-      <category term="性能优化" scheme="http://zhenggang.ink/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+      <category term="性能优化" scheme="http://zgang.top/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   
   <entry>
     <title>安装genymotion模拟器的使用注意事项</title>
-    <link href="http://zhenggang.ink/2015/11/29/2015-11-29-genymotion%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%AE%89%E8%A3%85%E8%AF%B4%E6%98%8E/"/>
-    <id>http://zhenggang.ink/2015/11/29/2015-11-29-genymotion模拟器安装说明/</id>
+    <link href="http://zgang.top/2015/11/29/2015-11-29-genymotion%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%AE%89%E8%A3%85%E8%AF%B4%E6%98%8E/"/>
+    <id>http://zgang.top/2015/11/29/2015-11-29-genymotion模拟器安装说明/</id>
     <published>2015-11-29T12:59:00.000Z</published>
     <updated>2018-05-27T13:22:06.796Z</updated>
     
@@ -168,19 +168,19 @@
     
     </summary>
     
-      <category term="android" scheme="http://zhenggang.ink/categories/android/"/>
+      <category term="android" scheme="http://zgang.top/categories/android/"/>
     
     
-      <category term="android" scheme="http://zhenggang.ink/tags/android/"/>
+      <category term="android" scheme="http://zgang.top/tags/android/"/>
     
-      <category term="模拟器" scheme="http://zhenggang.ink/tags/%E6%A8%A1%E6%8B%9F%E5%99%A8/"/>
+      <category term="模拟器" scheme="http://zgang.top/tags/%E6%A8%A1%E6%8B%9F%E5%99%A8/"/>
     
   </entry>
   
   <entry>
     <title>Android-判断当前是否触摸到view</title>
-    <link href="http://zhenggang.ink/2015/11/27/2015-11-27-android-touch/"/>
-    <id>http://zhenggang.ink/2015/11/27/2015-11-27-android-touch/</id>
+    <link href="http://zgang.top/2015/11/27/2015-11-27-android-touch/"/>
+    <id>http://zgang.top/2015/11/27/2015-11-27-android-touch/</id>
     <published>2015-11-27T14:22:41.000Z</published>
     <updated>2018-05-20T13:55:35.874Z</updated>
     
@@ -195,19 +195,19 @@
     
     </summary>
     
-      <category term="android" scheme="http://zhenggang.ink/categories/android/"/>
+      <category term="android" scheme="http://zgang.top/categories/android/"/>
     
     
-      <category term="android" scheme="http://zhenggang.ink/tags/android/"/>
+      <category term="android" scheme="http://zgang.top/tags/android/"/>
     
-      <category term="view" scheme="http://zhenggang.ink/tags/view/"/>
+      <category term="view" scheme="http://zgang.top/tags/view/"/>
     
   </entry>
   
   <entry>
     <title>Android-屏蔽back键，保证在点击back键时Dialog对话框不会消失</title>
-    <link href="http://zhenggang.ink/2015/11/25/2015-11-25-android-dialog-backkey/"/>
-    <id>http://zhenggang.ink/2015/11/25/2015-11-25-android-dialog-backkey/</id>
+    <link href="http://zgang.top/2015/11/25/2015-11-25-android-dialog-backkey/"/>
+    <id>http://zgang.top/2015/11/25/2015-11-25-android-dialog-backkey/</id>
     <published>2015-11-25T13:23:11.000Z</published>
     <updated>2018-05-20T13:55:34.181Z</updated>
     
@@ -222,10 +222,10 @@
     
     </summary>
     
-      <category term="android" scheme="http://zhenggang.ink/categories/android/"/>
+      <category term="android" scheme="http://zgang.top/categories/android/"/>
     
     
-      <category term="android" scheme="http://zhenggang.ink/tags/android/"/>
+      <category term="android" scheme="http://zgang.top/tags/android/"/>
     
   </entry>
   

@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no,email=no,adress=no">
     <meta name="browsermode" content="application">
     <meta name="screen-orientation" content="portrait">
-    <link rel="dns-prefetch" href="http://zhenggang.ink">
+    <link rel="dns-prefetch" href="http://zgang.top">
     <!--SEO-->
 
 <meta name="description" content="博观而约取，厚积而薄发。"/>
@@ -39,6 +39,8 @@
 
     
 
+
+    <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
 
 
 <link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7.css">
@@ -168,7 +170,7 @@
             
             
             <p class="fa fa-exclamation-triangle warning">
-                本文于<strong>819</strong>天之前发表，文中内容可能已经过时。
+                本文于<strong>847</strong>天之前发表，文中内容可能已经过时。
             </p>
         
     </div>
@@ -207,7 +209,22 @@
 
     <div id="comments">
         
-   <p>评论系统未开启，无法评论！</p>
+	<!-- Gitment评论插件通用代码 -->
+<div id="git">test</div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: "JadenTseng",
+  repo: "jadentseng.github.io",
+  oauth: {
+    client_id: "bd33e190b0cc06850fe1",
+    client_secret: "b48311d25261c5799fa2f6a2515e62731c999836"
+  },
+})
+gitment.render('git')
+</script>
+<!-- Gitment代码结束 -->
 
     </div>
 
@@ -220,6 +237,35 @@
     <aside class="col-md-4 sidebar">
         
         
+        
+        
+    <div class="widget">    
+        <h3 class="title">Search</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">localSearch</button>
+                
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
         
         
     <div class="widget notification">
@@ -286,7 +332,7 @@
         <h3 class="title">Friends</h3>
         <div class="content friends-link">
         
-            <a href="http://zhenggang.ink" class="fa" target="_blank">个人博客</a>
+            <a href="http://zgang.top" class="fa" target="_blank">个人博客</a>
         
         </div>
     </div>
